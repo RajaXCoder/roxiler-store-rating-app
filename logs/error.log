@@ -1,0 +1,26 @@
+2025-03-30 11:41:07 [[31merror[39m]: Error in signin: Cannot read properties of undefined (reading 'findOne')
+2025-03-30 11:42:21 [[31merror[39m]: Error in signin: Cannot read properties of undefined (reading 'findOne')
+2025-03-30 11:57:32 [[31merror[39m]: Error in signin: Cannot read properties of undefined (reading 'findOne')
+2025-03-30 12:01:13 [[31merror[39m]: Error in signin: Cannot read properties of undefined (reading 'findOne')
+2025-03-30 12:07:33 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'findByPk')
+    at isAdmin (/workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:23:8)
+    at Layer.handle [as handle_request] (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/layer.js:95:5)
+    at next (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/route.js:149:13)
+    at /workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:18:5
+    at /workspaces/roxiler-store-rating-app-assign/node_modules/jsonwebtoken/verify.js:261:12
+    at getSecret (/workspaces/roxiler-store-rating-app-assign/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/workspaces/roxiler-store-rating-app-assign/node_modules/jsonwebtoken/verify.js:101:10)
+    at verifyToken (/workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:13:7)
+    at Layer.handle [as handle_request] (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/layer.js:95:5)
+    at next (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/route.js:149:13)
+2025-03-30 12:07:55 [[31merror[39m]: TypeError: Cannot read properties of undefined (reading 'findByPk')
+    at isAdmin (/workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:23:8)
+    at Layer.handle [as handle_request] (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/layer.js:95:5)
+    at next (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/route.js:149:13)
+    at /workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:18:5
+    at /workspaces/roxiler-store-rating-app-assign/node_modules/jsonwebtoken/verify.js:261:12
+    at getSecret (/workspaces/roxiler-store-rating-app-assign/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/workspaces/roxiler-store-rating-app-assign/node_modules/jsonwebtoken/verify.js:101:10)
+    at verifyToken (/workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:13:7)
+    at Layer.handle [as handle_request] (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/layer.js:95:5)
+    at next (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/route.js:149:13)
