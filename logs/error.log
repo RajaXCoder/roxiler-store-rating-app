@@ -24,3 +24,5 @@
     at verifyToken (/workspaces/roxiler-store-rating-app-assign/src/middlewares/auth.jwt.js:13:7)
     at Layer.handle [as handle_request] (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/layer.js:95:5)
     at next (/workspaces/roxiler-store-rating-app-assign/node_modules/express/lib/router/route.js:149:13)
+2025-03-30 17:03:10 [[31merror[39m]: Error in signup: notNull Violation: User.name cannot be null
+2025-03-30 17:04:39 [[31merror[39m]: Error in signup: Validation error: Validation len on name failed

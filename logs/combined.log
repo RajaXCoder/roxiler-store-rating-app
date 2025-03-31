@@ -90,3 +90,29 @@
 2025-03-30 12:17:54 [[32minfo[39m]: Server is running on port 8080.
 2025-03-30 12:18:46 [[32minfo[39m]: Server is running on port 8080.
 2025-03-30 12:37:05 [[32minfo[39m]: Server is running on port 8080.
+2025-03-30 16:55:40 [[32minfo[39m]: Server is running on port 8080.
+2025-03-30 17:01:13 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:01:13 +0000] "POST /api/auth/signup HTTP/1.1" 400 43 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:03:10 [[31merror[39m]: Error in signup: notNull Violation: User.name cannot be null
+2025-03-30 17:03:10 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:03:10 +0000] "POST /api/auth/signup HTTP/1.1" 500 73 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:04:39 [[31merror[39m]: Error in signup: Validation error: Validation len on name failed
+2025-03-30 17:04:39 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:04:39 +0000] "POST /api/auth/signup HTTP/1.1" 500 77 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:10:02 [[32minfo[39m]: User logged in: raja@example.com
+2025-03-30 17:10:02 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:10:02 +0000] "POST /api/auth/signin HTTP/1.1" 200 277 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:24:05 [[32minfo[39m]: User created: rajasekarrdx35@gmail.com
+2025-03-30 17:24:05 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:24:05 +0000] "POST /api/auth/signup HTTP/1.1" 200 144 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:26:32 [[32minfo[39m]: Server is running on port 8080.
+2025-03-30 17:26:55 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:26:55 +0000] "POST /api/auth/signup HTTP/1.1" 400 54 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:27:19 [[32minfo[39m]: User created: ddajasekarrdx35@gmail.com
+2025-03-30 17:27:19 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:27:19 +0000] "POST /api/auth/signup HTTP/1.1" 200 145 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:38:58 [[32minfo[39m]: User logged in: ddajasekarrdx35@gmail.com
+2025-03-30 17:38:58 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:38:58 +0000] "POST /api/auth/signin HTTP/1.1" 200 277 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:42:20 [[32minfo[39m]: User logged in: ddajasekarrdx35@gmail.com
+2025-03-30 17:42:20 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:42:20 +0000] "POST /api/auth/signin HTTP/1.1" 200 277 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 17:43:24 [[32minfo[39m]: User logged in: ddajasekarrdx35@gmail.com
+2025-03-30 17:43:24 [[32minfo[39m]: ::1 - - [30/Mar/2025:17:43:24 +0000] "POST /api/auth/signin HTTP/1.1" 200 277 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 18:02:53 [[32minfo[39m]: User logged in: ddajasekarrdx35@gmail.com
+2025-03-30 18:02:53 [[32minfo[39m]: ::1 - - [30/Mar/2025:18:02:53 +0000] "POST /api/auth/signin HTTP/1.1" 200 277 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 18:03:46 [[32minfo[39m]: User created: mia@gmail.com
+2025-03-30 18:03:46 [[32minfo[39m]: ::1 - - [30/Mar/2025:18:03:46 +0000] "POST /api/auth/signup HTTP/1.1" 200 141 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+2025-03-30 18:03:59 [[32minfo[39m]: User logged in: mia@gmail.com
+2025-03-30 18:03:59 [[32minfo[39m]: ::1 - - [30/Mar/2025:18:03:59 +0000] "POST /api/auth/signin HTTP/1.1" 200 273 "http://127.0.0.1:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"

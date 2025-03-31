@@ -17,7 +17,7 @@ exports.signup = async (req, res) => {
       role: req.body.role || "Normal User",
     });
 
-    console.log(req.body);
+    // console.log(user);
 
     logger.info(`User created: ${user.email}`);
     apiResponse.successResponse(
