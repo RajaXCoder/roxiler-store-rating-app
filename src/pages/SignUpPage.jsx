@@ -1,17 +1,17 @@
-import React from "react";
-import { useNavigate, Navigate } from "react-router-dom";
-import SignUpForm from "../components/auth/SignUpForm";
-import Cookies from "js-cookie";
+import React from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
+import SignUpForm from '../components/auth/SignUpForm';
+import Cookies from 'js-cookie';
 
 const SignUpPage = () => {
   const navigate = useNavigate();
 
   const handleSuccess = (data) => {
-    console.log("Registration successful:", data);
-    navigate("/signin");
+    console.log('Registration successful:', data);
+    navigate('/signin');
   };
 
-  if (Cookies.get("token")) {
+  if (Cookies.get('token')) {
     return <Navigate to="/" />;
   }
 
@@ -42,7 +42,7 @@ const SignUpPage = () => {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Already have an account?{" "}
+                Already have an account?{' '}
                 <a
                   href="/signin"
                   className="font-medium text-blue-600 hover:text-blue-500 transition-colors"

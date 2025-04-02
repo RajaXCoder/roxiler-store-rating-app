@@ -1,24 +1,24 @@
-import React, { useState } from "react";
-import { signUp } from "../../api/auth";
-import Input from "../ui/Input";
-import Button from "../ui/Button";
+import React, { useState } from 'react';
+import { signUp } from '../../api/auth';
+import Input from '../ui/Input';
+import Button from '../ui/Button';
 import {
   UserIcon,
   EnvelopeIcon,
   LockClosedIcon,
   HomeIcon,
   IdentificationIcon,
-} from "@heroicons/react/24/outline";
+} from '@heroicons/react/24/outline';
 
-const roles = ["Store Owner", "Normal User", "System Administrator"];
+const roles = ['Store Owner', 'Normal User', 'System Administrator'];
 
 const SignUpForm = ({ onSuccess }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    rePassword: "",
-    address: "",
+    name: '',
+    email: '',
+    password: '',
+    rePassword: '',
+    address: '',
     role: roles[0],
   });
   const [errors, setErrors] = useState({});
@@ -36,7 +36,7 @@ const SignUpForm = ({ onSuccess }) => {
     setErrors({});
 
     if (formData.password !== formData.rePassword) {
-      setErrors({ rePassword: "Passwords do not match" });
+      setErrors({ rePassword: 'Passwords do not match' });
       setIsLoading(false);
       return;
     }
@@ -50,7 +50,7 @@ const SignUpForm = ({ onSuccess }) => {
         setErrors(error.errors);
       } else {
         setErrors({
-          general: error.message || "Registration failed. Please try again.",
+          general: error.message || 'Registration failed. Please try again.',
         });
       }
     } finally {
@@ -96,7 +96,7 @@ const SignUpForm = ({ onSuccess }) => {
         <div className="relative">
           <Input
             label="Password"
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             name="password"
             value={formData.password}
             onChange={handleChange}
@@ -114,7 +114,7 @@ const SignUpForm = ({ onSuccess }) => {
 
         <Input
           label="Confirm Password"
-          type={showPassword ? "text" : "password"}
+          type={showPassword ? 'text' : 'password'}
           name="rePassword"
           value={formData.rePassword}
           onChange={handleChange}
@@ -176,11 +176,11 @@ const SignUpForm = ({ onSuccess }) => {
         </div>
         <div className="ml-3 text-sm">
           <label htmlFor="terms" className="font-medium text-gray-700">
-            I agree to the{" "}
+            I agree to the{' '}
             <a href="#" className="text-blue-600 hover:text-blue-500">
               Terms
-            </a>{" "}
-            and{" "}
+            </a>{' '}
+            and{' '}
             <a href="#" className="text-blue-600 hover:text-blue-500">
               Privacy Policy
             </a>

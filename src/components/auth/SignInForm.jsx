@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { signIn } from "../../api/auth";
-import Input from "../ui/Input";
-import Button from "../ui/Button";
-import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/outline";
+import React, { useState } from 'react';
+import { signIn } from '../../api/auth';
+import Input from '../ui/Input';
+import Button from '../ui/Button';
+import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/outline';
 
 const SignInForm = ({ onSuccess }) => {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: '',
+    password: '',
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +31,7 @@ const SignInForm = ({ onSuccess }) => {
         setErrors(error.errors);
       } else {
         setErrors({
-          general: error.message || "Login failed. Please try again.",
+          general: error.message || 'Login failed. Please try again.',
         });
       }
     } finally {
@@ -62,7 +62,7 @@ const SignInForm = ({ onSuccess }) => {
       <div className="relative">
         <Input
           label="Password"
-          type={showPassword ? "text" : "password"}
+          type={showPassword ? 'text' : 'password'}
           name="password"
           value={formData.password}
           onChange={handleChange}
@@ -76,7 +76,7 @@ const SignInForm = ({ onSuccess }) => {
           className="absolute right-3 bottom-3 text-sm text-blue-600 hover:text-blue-800"
           onClick={() => setShowPassword(!showPassword)}
         >
-          {showPassword ? "Hide" : "Show"}
+          {showPassword ? 'Hide' : 'Show'}
         </button>
       </div>
 

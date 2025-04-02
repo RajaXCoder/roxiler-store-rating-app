@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
 const Input = ({
   label,
-  type = "text",
+  type = 'text',
   name,
   value,
   onChange,
   error,
   icon: Icon,
-  className = "",
+  className = '',
   ...props
 }) => {
   return (
@@ -33,8 +33,8 @@ const Input = ({
           name={name}
           value={value}
           onChange={onChange}
-          className={`block w-full ${Icon ? "pl-10" : "pl-3"} pr-3 py-2.5 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${
-            error ? "border-red-500" : "border-gray-300"
+          className={`block w-full ${Icon ? 'pl-10' : 'pl-3'} pr-3 py-2.5 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm ${
+            error ? 'border-red-500' : 'border-gray-300'
           }`}
           {...props}
         />

@@ -1,15 +1,16 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Navigate,
-} from "react-router-dom";
-import SignInPage from "./pages/SignInPage";
-import SignUpPage from "./pages/SignUpPage";
-import Home from "./pages/Home";
-import Notfound from "./pages/Notfound";
-import ProtectedRoute from "./components/auth/ProtectedRoute";
+} from 'react-router-dom';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
+import Home from './pages/Home';
+import Notfound from './pages/Notfound';
+import StatsView from './pages/StatsView';
+import ProtectedRoute from './components/auth/ProtectedRoute';
 
 function App() {
   return (
@@ -22,6 +23,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/stats"
+          element={
+            <ProtectedRoute>
+              <StatsView />
             </ProtectedRoute>
           }
         />

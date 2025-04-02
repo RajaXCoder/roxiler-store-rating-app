@@ -1,18 +1,20 @@
-import React from "react";
-import { useNavigate, Navigate } from "react-router-dom";
-import SignInForm from "../components/auth/SignInForm";
-import Cookies from "js-cookie";
+import React from 'react';
+import { useNavigate, Navigate } from 'react-router-dom';
+import SignInForm from '../components/auth/SignInForm';
+import Cookies from 'js-cookie';
 
 const SignInPage = () => {
   const navigate = useNavigate();
 
   const handleSuccess = (data) => {
-    console.log("Login successful:", data);
-    Cookies.set("token", data.data.accessToken, { expires: 7 });
-    navigate("/");
+    console.log('Login successful:', data);
+    Cookies.set('user-role', data.data.role, { expires: 7 });
+    console.log(data.data.role);
+    Cookies.set('token', data.data.accessToken, { expires: 7 });
+    navigate('/');
   };
 
-  if (Cookies.get("token")) {
+  if (Cookies.get('token')) {
     return <Navigate to="/" />;
   }
   return (
@@ -40,7 +42,7 @@ const SignInPage = () => {
 
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
-                Don't have an account?{" "}
+                Don't have an account?{' '}
                 <a
                   href="/signup"
                   className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
