@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const api = axios.create({
-  baseURL: 'https://roxiler-store-rating-app-backend.onrender.com/api',
+  baseURL: 'http://localhost:8080/api', // 'https://roxiler-store-rating-app-backend.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
@@ -26,17 +26,17 @@ api.interceptors.request.use(
 );
 
 // Optional: Response interceptor to handle token expiration
-api.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      // Token expired or invalid
-      Cookies.remove('token');
-      Cookies.remove('user-role'); // Clear invalid token
-      window.location.href = '/signin'; // Redirect to login (adjust as needed)
-    }
-    return Promise.reject(error);
-  }
-);
+// api.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
+//     if (error.response?.status === 401) {
+//       // Token expired or invalid
+//       Cookies.remove('token');
+//       Cookies.remove('user-role'); // Clear invalid token
+//       window.location.href = '/signin'; // Redirect to login (adjust as needed)
+//     }
+//     return Promise.reject(error);
+//   }
+// );
 
 export default api;

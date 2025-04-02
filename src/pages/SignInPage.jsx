@@ -9,6 +9,7 @@ const SignInPage = () => {
   const handleSuccess = (data) => {
     console.log('Login successful:', data);
     Cookies.set('user-role', data.data.role, { expires: 7 });
+    Cookies.set('user-id', data.data.id, { expires: 7 });
     console.log(data.data.role);
     Cookies.set('token', data.data.accessToken, { expires: 7 });
     navigate('/');

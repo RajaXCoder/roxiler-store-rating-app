@@ -9,7 +9,7 @@ import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import Home from './pages/Home';
 import Notfound from './pages/Notfound';
-import StatsView from './pages/StatsView';
+import StoreView from './pages/storeView';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 
 function App() {
@@ -22,15 +22,15 @@ function App() {
           path="/"
           element={
             <ProtectedRoute>
-              <Home />
+              <Home className="font-mono" />
             </ProtectedRoute>
           }
         />
         <Route
-          path="/stats"
+          path="/store"
           element={
             <ProtectedRoute>
-              <StatsView />
+              <StoreView className="font-mono" />
             </ProtectedRoute>
           }
         />
