@@ -7,11 +7,18 @@ const logger = require("../utils/logger");
 // Create a new store
 exports.createStore = async (req, res) => {
   try {
+    const {name, email, address, ownerId} = req.body
+     // Validate required fields
+     if (!name || !email || !address) {
+      logger.warn('Validation failed - Missing required fields');
+      return apiResponse.badRequestResponse(res, 'Name, email, and address are required');
+    }
+
     const store = await Store.create({
-      name: req.body.name,
-      email: req.body.email,
-      address: req.body.address,
-      ownerId: req.body.ownerId || req.userId,
+      name,
+      email,
+      address,
+      ownerId : ownerId || req.userId, 
     });
 
     logger.info(`Store created: ${store.name}`);
@@ -26,7 +33,18 @@ exports.createStore = async (req, res) => {
 exports.getAllStores = async (req, res) => {
   try {
     const stores = await Store.findAll({
-      attributes: ["id", "name", "email", "address", "createdAt"],
+      attributes: [
+        'id',
+        'name',
+        'email',
+        'address',
+        'createdAt',
+        // Calculate average rating directly in SQL
+        [db.sequelize.literal('(SELECT COALESCE(AVG(rating), 0) FROM ratings WHERE ratings.storeId = Store.id)'), 'averageRating'],
+        // Count ratings directly in SQL
+        [db.sequelize.literal('(SELECT COUNT(*) FROM ratings WHERE ratings.storeId = Store.id)'), 'ratingCount']
+      ],
+      
       include: req.query.includeOwner
         ? [
             {
@@ -112,16 +130,18 @@ exports.getStoreById = async (req, res) => {
 exports.updateStore = async (req, res) => {
   try {
     const store = await Store.findByPk(req.params.id);
+    console.log(req.body)
 
     if (!store) {
       logger.warn(`Store not found with id: ${req.params.id}`);
       return apiResponse.notFoundResponse(res, "Store not found");
     }
 
+    console.log(store.ownerId)
     // Check if the user is the owner or admin
     if (
-      store.ownerId !== req.userId &&
-      req.userRole !== "System Administrator"
+      store.ownerId !== req.body.userId &&
+      req.body.userRole !== "System Administrator"
     ) {
       logger.warn(
         `Unauthorized attempt to update store by user: ${req.userId}`
@@ -159,11 +179,11 @@ exports.deleteStore = async (req, res) => {
       logger.warn(`Store not found with id: ${req.params.id}`);
       return apiResponse.notFoundResponse(res, "Store not found");
     }
-
+      console.log(req.body)
     // Check if the user is the owner or admin
     if (
       store.ownerId !== req.userId &&
-      req.userRole !== "System Administrator"
+      req.body.userRole !== "System Administrator"
     ) {
       logger.warn(
         `Unauthorized attempt to delete store by user: ${req.userId}`

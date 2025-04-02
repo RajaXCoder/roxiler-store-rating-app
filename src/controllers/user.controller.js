@@ -7,7 +7,7 @@ const logger = require("../utils/logger");
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.findAll({
-      attributes: ["id", "name", "email", "role", "createdAt"],
+      attributes: ["id", "name", "email", "role", "createdAt", "address"],
       where: {
         role: req.query.role || { [db.Sequelize.Op.ne]: null },
       },
