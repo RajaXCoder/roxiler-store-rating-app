@@ -9,7 +9,7 @@ const SignInPage = () => {
   const handleSuccess = (data) => {
     console.log('Login successful:', data);
     Cookies.set('user-role', data.data.role, { expires: 7 });
-    Cookies.set('user-id', data.data.id, { expires: 7 });
+    // Cookies.set('user-id', data.data.id, { expires: 7 });
     console.log(data.data.role);
     Cookies.set('token', data.data.accessToken, { expires: 7 });
     navigate('/');
@@ -45,7 +45,7 @@ const SignInPage = () => {
               <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
                 <a
-                  href="/signup"
+                  onclick={() => navigate('/signup')}
                   className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
                 >
                   Sign up
