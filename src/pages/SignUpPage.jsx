@@ -43,12 +43,12 @@ const SignUpPage = () => {
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Already have an account?{' '}
-                <a
-                  onclick={() => navigate('/signin')}
-                  className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
+                <button
+                  className="font-medium text-blue-600 hover:text-blue-500 transition-colors cursor-pointer"
+                  onClick={() => navigate('/signin')}
                 >
-                  Sign in
-                </a>
+                  Sign In
+                </button>
               </p>
             </div>
           </div>

@@ -44,12 +44,12 @@ const SignInPage = () => {
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
-                <a
-                  onclick={() => navigate('/signup')}
-                  className="font-medium text-blue-600 hover:text-blue-500 transition-colors"
+                <button
+                  className="font-medium text-blue-600 hover:text-blue-500 transition-colors cursor-pointer"
+                  onClick={() => navigate('/signup')}
                 >
                   Sign up
-                </a>
+                </button>
               </p>
             </div>
           </div>
