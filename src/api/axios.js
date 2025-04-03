@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api', // 'https://roxiler-store-rating-app-backend.onrender.com/api',
+  baseURL: 'https://rajaxroxiler-store-server.onrender.com/api', // 'https://roxiler-store-rating-app-backend.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
